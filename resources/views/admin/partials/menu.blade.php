@@ -32,3 +32,7 @@
   <i class="fa-solid fa-user-tie"></i> <span>Report Karyawan</span>
 </a>
 
+<small>Seting</small>
+<a class="nav-link-custom {{ $a==='setting' ? 'active' : '' }}" href="{{ route('setting.menu') }}">
+  <i class="fa-solid fa-cog"></i> <span>Menu Management</span>
+</a>

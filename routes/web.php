@@ -9,6 +9,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\ReportCustomerController;
 use App\Http\Controllers\ReportEmployeeController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\menuControlling;
 
 use Illuminate\Support\Facades\Route;
 
@@ -60,4 +61,6 @@ Route::middleware(['auth', 'company'])->group(function () {
     Route::get('reports/employees/export/csv', [ReportEmployeeController::class, 'exportCsv'])
         ->name('reports.employees.export.csv');
     
+    Route::get('setting/menu', [menuControlling::class, 'index'])->name('setting.menu');
+        
 });
